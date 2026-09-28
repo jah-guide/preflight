@@ -1,0 +1,33 @@
+# Copilot checklist: Output stress-test (Preflight)
+
+Adversarial self-critique — single-pass in Copilot; 2-pass in Cursor/Claude. Full skill: `adversarial-self-critique`.
+
+## Before ship (spec, PR summary, "done")
+
+Produce a findings table:
+
+| ID | Severity | Finding | Fix |
+|----|----------|---------|-----|
+
+Severity: **Blocker** (wrong/unsafe/no evidence) | **Major** | **Minor**
+
+## Attack vectors
+
+- [ ] vs requirements / scope creep
+- [ ] Edge: empty, max, auth, concurrent
+- [ ] Claims vs fresh command output
+- [ ] Security / PII / secrets
+
+## Revise budget
+
+- [ ] Fix all Blockers you can
+- [ ] Max **2** full revise passes in agent environments; in Copilot ask human to re-run once
+
+## Ship
+
+- [ ] Zero blockers OR explicit user waiver listed
+- [ ] Append stress-tested note:
+
+`Stress-tested: adversarial critique ([0 blockers | waived F-..]). Passes: N.`
+
+**Preflight:** https://github.com/jah-guide/preflight
