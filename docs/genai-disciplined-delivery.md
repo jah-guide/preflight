@@ -8,9 +8,11 @@ I use generative AI as a **delivery accelerator**, not a requirements substitute
 
 1. **Problem clarity** — pain, stakeholders, testable outcomes  
 2. **Written requirements** — MoSCoW, FR/NFR IDs, acceptance criteria  
-3. **Spec & plan approval** — design captured, human gate before implement  
-4. **Traceability** — every Must requirement links to build artifacts and tests  
-5. **Adversarial stress-test** — blocker/major/minor critique before ship  
+3. **Spec & phased plan approval** — design captured, human gate before implement  
+4. **Phase gates** — per-phase todos, stress-test, explicit approval before next phase  
+5. **Traceability** — every Must requirement links to build artifacts and tests  
+6. **Adversarial stress-test** — rubric, ambiguity scan, max two revise passes before ship  
+7. **Self-improve loop** — tighten skills from repeat failures (human-approved edits)  
 
 ## Tooling
 

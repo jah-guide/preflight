@@ -16,19 +16,19 @@ Most agent failures are not syntax errors. They are **wrong problem, missing edg
 
 ---
 
-## Skills (v0.1)
+## Skills (v0.1.1)
 
 | Skill | Role |
 |-------|------|
-| [`requirements-engineer`](skills/requirements-engineer/SKILL.md) | Full RE loop + **no code until problem & Must FRs exist** |
+| [`requirements-engineer`](skills/requirements-engineer/SKILL.md) | Full RE loop + **deterministic Q&A**; **no code until problem & Must FRs exist** |
 | [`analysis-docs-pack`](skills/analysis-docs-pack/SKILL.md) | Scaffold generic `docs/01`–`09` analysis pack |
-| [`spec-driven-development`](skills/spec-driven-development/SKILL.md) | Gated specify → plan → implement; **no code until plan approved** |
+| [`spec-driven-development`](skills/spec-driven-development/SKILL.md) | **Q&A → phased plan → per-phase todos → stress-test → human gate**; no code until plan approved |
 | [`traceability-matrix`](skills/traceability-matrix/SKILL.md) | REQ → design → test; **block done on orphans** |
-| [`adversarial-self-critique`](skills/adversarial-self-critique/SKILL.md) | **Output stress-test** — severity rubric, max 2 revise passes, stress-tested note |
+| [`adversarial-self-critique`](skills/adversarial-self-critique/SKILL.md) | **Output stress-test** — rubric, ambiguity scan, phase-scoped checks, max 2 passes |
 
-Suggested flow: **requirements-engineer → analysis-docs-pack → spec-driven-development → (implement) → traceability-matrix → adversarial-self-critique**
+Suggested flow: **requirements-engineer → analysis-docs-pack → spec-driven-development (phased) → traceability-matrix → adversarial-self-critique (per phase + ship)**
 
-Map and triggers: [docs/skill-map.md](docs/skill-map.md)
+Workflow reference: [docs/phased-delivery-pipeline.md](docs/phased-delivery-pipeline.md) · Map and triggers: [docs/skill-map.md](docs/skill-map.md)
 
 ---
 
@@ -84,7 +84,9 @@ Copilot adapters in [`adapters/github-copilot/`](adapters/github-copilot/) are *
 
 ## Roadmap (parked)
 
-Not in v0.1 — planned later:
+**v0.2 — Strategic requirements engineering** (stakeholder strategy, value modeling, long-horizon REQ governance). Design and RE pack only in roadmap; not built in v0.1.1.
+
+Also planned later:
 
 - `writing-implementation-plans` — task-level plans after spec approval  
 - `verification-before-completion` — evidence-before-claims iron law  

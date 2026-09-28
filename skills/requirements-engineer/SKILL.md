@@ -6,7 +6,8 @@ description: >-
   functional/non-functional requirements with acceptance criteria. Use when the
   problem is unclear, stakeholders disagree, scope is fuzzy, or before coding
   when no validated requirements exist. Includes a lightweight gate that blocks
-  implementation until a problem statement and baseline FRs exist.
+  implementation until a problem statement and baseline FRs exist. Preflight v0.1.1
+  adds deterministic clarifying questions (constrained choices) before baseline.
 ---
 
 # Requirements Engineer
@@ -62,7 +63,16 @@ Capture:
 - Constraints (time, budget, compliance)
 - Known risks
 
-Ask **one focused question at a time** when critical facts are missing.
+Ask **deterministic clarifying questions** when critical facts are missing:
+
+| Style | When to use |
+|-------|-------------|
+| **Constrained choice** | Scope, priority, or mutually exclusive options |
+| **Yes / No / Out of scope** | Binary behavior or deferral |
+| **Bounded metric** | NFR targets (pick from tiers or specify) |
+| **One-at-a-time** | When the next question depends on the answer |
+
+State an **explicit default** if the human does not answer non-blocking items, and record it in the assumption log.
 
 ### 2. Clarify
 
@@ -71,6 +81,7 @@ Resolve ambiguity with the human:
 - Define terms (glossary entries)
 - Bound scope (“not in v1”)
 - Identify implicit assumptions → explicit
+- Reject open-ended “anything else?” until Must paths are testable
 
 Use **Assumption log** table:
 
@@ -208,6 +219,15 @@ See `templates/requirements-doc-starter.md` in this skill folder.
 | Skill | When |
 |-------|------|
 | `analysis-docs-pack` | Scaffold full 01–09 pack |
-| `spec-driven-development` | After baseline FRs exist |
+| `spec-driven-development` | After baseline FRs exist; phased Q&A → plan → gates |
 | `traceability-matrix` | Once FR IDs stable |
 | `adversarial-self-critique` | On requirements doc before baseline sign-off |
+
+## Self-improve loop
+
+If elicitation repeatedly misses the same class of gap (stakeholder, NFR, boundary):
+
+- Propose edits to this `SKILL.md` or `skills/requirements-engineer/lessons.md`
+- Show the human; do **not** auto-commit to Preflight unless asked
+
+Downstream phased delivery: [docs/phased-delivery-pipeline.md](../../docs/phased-delivery-pipeline.md)
